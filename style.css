@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background-color: #ffcba9;
+    font-family: bigshot one;
+}
+
+.navbar {
+    background-color: #ff945f;
+    height: 50px;
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    list-style-type: none;
+    color: #a52a2a;
+    margin: 5px;
+}
+
+li {
+    margin: 10px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px 0 30px;
+    border-style: double;
+    color: #8b4513;
+    background-color: #000000;
+}
+
+.questions {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq {
+    background-color: #ff945f;
+    border: 1px solid #8b4513;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq.active {
+    background-color: #f0f8ff;
+    box-shadow: 5px 5px 5px;
+}
+
+.faq-title {
+    margin: 10px 5px 5px 5px;
+    color: #a52a2a;
+    text-align: center;
+}
+
+.faq-answer {
+    color: #a52a2a;
+    text-align: center;
+    font-size: 18px;
+    display: none;
+}
+
+.faq.active .faq-answer {
+    display: block;
+}
+
+.faq-toggle {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+}
+
+.faq-toggle:focus {
+    outline: 0;
+}
+
+.faq-toggle .fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+    display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+
+@media (max-width: 400px) {
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .navbar {
+        height: 95px;
+    }
+
+    li {
+        margin: 5px;
+    }
+
+    .button {
+        right: 10px;
+        top: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .navbar {
+        height: 95px;
+    }
+
+    li {
+        margin: 10px;
+    }
+
+    .button {
+        right: 10px;
+        top: 10px;
+    }
+}
